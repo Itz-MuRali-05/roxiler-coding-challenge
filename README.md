@@ -1,73 +1,79 @@
-# React + TypeScript + Vite
+# Roxiler Systems Coding Challenge
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack web application developed as part of the Roxiler Systems technical assessment.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- User Authentication & Authorization
+- Responsive UI Design
+- Secure API Integration
+- Search, Filter & Sorting Functionality
+- Clean Architecture & Modular Code Structure
+- Optimized Performance
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Frontend
+- React.js
+- HTML5
+- CSS3
+- JavaScript
 
-## Expanding the ESLint configuration
+### Backend
+- Node.js
+- Express.js
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Database
+- MongoDB / Prisma / SQL (edit based on your project)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Project Structure
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+/backend
+/frontend
+/routes
+/controllers
+/components
+/services
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Installation
+
+Clone the repository:
+
+```bash
+git clone <your-github-link>
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Install dependencies:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
+
+Run frontend:
+
+```bash
+npm run dev
+```
+
+Run backend:
+
+```bash
+npm start
+```
+
+## Environment Variables
+
+Create a `.env` file and configure:
+
+```env
+PORT=
+DATABASE_URL=
+JWT_SECRET=
+API_KEY=
+```
+
+## Author
+
+Murali
+
+Built for Roxiler Systems Technical Challenge.
